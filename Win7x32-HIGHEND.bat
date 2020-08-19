@@ -4,7 +4,7 @@ cd %~dp0
 cd Programs
 mode 100,8
 echo.
-color 5f
+color 4f
 chgcolor 4f
 echo.
 @echo====================Programs==============================
