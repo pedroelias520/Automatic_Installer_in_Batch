@@ -4,7 +4,7 @@ cd %~dp0
 cd Programs
 mode 100,8
 echo.
-color 4f
+color 5f
 chgcolor 4f
 echo.
 @echo====================Programs==============================
@@ -18,7 +18,7 @@ start ChromeSetup.exe /silent /install
 echo ------Google Chrome Instalado------
 
 echo Instalando - DoroPDF
-start cscript.exe install_archive.vbs "DoroSetup.zip" "DoroSetup.exe /Silent
+start DoroSetup.exe /Silent
 echo ------DoroPDF Instalado------
 
 echo Instalando - Firefox Navigator
@@ -33,13 +33,9 @@ echo Instalando - K-lite
 start k-lite-codec-pack-mega-15-6-0.exe /verysilent
 echo ------K-lite Instalado------
 
-echo Instalando - Nero 8 
-start Nero-8.3.6.0_ptb_trial.exe
-echo ------Nero 8 Instalado------
-
-echo Instalando - Adobe 
-start readerdc_br_gi_cra_install.exe /msi EULA_ACCEPT=YES /qn 
-echo ------Adobe Instalado------
+echo Instalando - Anydesk 
+start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
+echo ------Teamviewer Instalado-----
 
 echo Instalando - Teamviewer 
 start /wait TeamViewer_Setup.exe /S /norestart
@@ -57,6 +53,17 @@ echo Instalando - 3DP_NET
 start 3DP_Net_v1911.exe 
 echo ------3DP_NET Instalado------
 
+echo Instalando - Nero 8 
+start Nero-8.3.6.0_ptb_trial.exe
+echo ------Nero 8 Instalado------
+
 cd Microsoft Office 2010 - By Smith BR
 start setup.exe
 echo ------Microsoft Office 2010 Instalado------
+
+cd..
+pause
+
+echo Instalando - Adobe 
+start readerdc_br_gi_cra_install.exe /msi EULA_ACCEPT=YES /qn 
+echo ------Adobe Instalado------
