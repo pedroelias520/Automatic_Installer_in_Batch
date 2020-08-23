@@ -25,10 +25,6 @@ start vcredist_x64.exe_2015 /Q
 
 pause 
 
-echo Instalando requisitos mínimos 
-start vcredist_x64.exe /Q
-echo Começando instalação...
-
 echo Instalando - Driver Booster 
 start driver_booster_setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
 echo ------Driver Booster Instalado------
@@ -58,6 +54,9 @@ start Nero-8.3.6.0_ptb_trial.exe
 start Serial.txt
 echo ------Nero 8 Instalado------
 
+echo Instalando - Anydesk 
+start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
+echo ------Anydesk Instalado------
 
 echo Instalando - Teamviewer 
 start /wait TeamViewer_Setup.exe /S /norestart
@@ -66,10 +65,6 @@ echo ------Teamviewer Instalado------
 echo Instalando - Winrar 
 start winrar-x64-591.exe /S 
 echo ------Winrar Instalado------
-
-echo Instalando - Kaspesky 
-start kts20.0.14.1085abcdefghijpt_19523.exe /s 
-echo ------Kaspesky Instalado------
 
 echo Instalando - 3DP_NET 
 start 3DP_Net_v1911.exe 
@@ -88,9 +83,11 @@ echo ------Adobe Instalado------
 
 pause 
 
-echo Instalando - Anydesk 
-start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
-echo ------Anydesk Instalado------
+
+echo Instalando - Kaspesky 
+start kts20.0.14.1085abcdefghijpt_19523.exe /s 
+echo ------Kaspesky Instalado------
+
 
 echo "Todos os programs foram instalados!"
 pause

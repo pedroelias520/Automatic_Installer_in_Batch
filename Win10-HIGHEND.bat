@@ -8,23 +8,25 @@ color 1f
 echo.
 @echo====================Programs==============================
 echo.
+echo Deseja iniciar a instalação?
+pause
+
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
-start vcredist_x86.exe /Q)
+start vcredist_x86.exe /Q
+start vcredist_x86_2015.exe /Q
+)
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
-start vcredist_x64.exe /Q)
+start vcredist_x64.exe /Q
+start vcredist_x64_2015.exe /Q
+)
 
 
 pause 
-
-echo Instalando requisitos mínimos 
-start vcredist_x64.exe /Q
-echo Começando instalação...
-
 echo Instalando - Driver Booster 
 start driver_booster_setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
 echo ------Driver Booster Instalado------
@@ -54,22 +56,17 @@ start Nero-8.3.6.0_ptb_trial.exe
 start Serial.txt
 echo ------Nero 8 Instalado------
 
-
 echo Instalando - Teamviewer 
 start /wait TeamViewer_Setup.exe /S /norestart
 echo ------Teamviewer Instalado------
 
+echo Instalando - Anydesk 
+start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
+echo ------Anydesk Instalado------
+
 echo Instalando - Winrar 
 start winrar-x64-591.exe /S 
 echo ------Winrar Instalado------
-
-echo Instalando - Kaspesky 
-start kts20.0.14.1085abcdefghijpt_19523.exe /s 
-echo ------Kaspesky Instalado------
-
-echo Instalando - 3DP_NET 
-start 3DP_Net_v1911.exe 
-echo ------3DP_NET Instalado------
 
 cd Microsoft Office 2010 - By Smith BR
 start setup.exe
@@ -82,11 +79,9 @@ echo Instalando - Adobe
 start readerdc_br_gi_cra_install.exe /msi EULA_ACCEPT=YES /qn 
 echo ------Adobe Instalado------
 
-pause 
-
-echo Instalando - Anydesk 
-start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
-echo ------Anydesk Instalado------
+echo Instalando - Kaspesky 
+start kts20.0.14.1085abcdefghijpt_19523.exe
+echo ------Kaspesky Instalado------
 
 echo "Todos os programs foram instalados!"
 pause

@@ -13,18 +13,18 @@ reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" 
 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
-start vcredist_x86.exe /Q)
+start vcredist_x86.exe /Q
+start vcredist_x86_2015.exe /Q
+)
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
-start vcredist_x64.exe /Q)
+start vcredist_x64.exe /Q
+start vcredist_x64_2015.exe /Q
+)
 
 
 pause 
-
-echo Instalando requisitos mínimos 
-start vcredist_x64.exe /Q
-echo Começando instalação...
 
 echo Instalando - Driver Booster 
 start driver_booster_setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
@@ -60,13 +60,14 @@ echo Instalando - Teamviewer
 start /wait TeamViewer_Setup.exe /S /norestart
 echo ------Teamviewer Instalado------
 
+echo Instalando - Anydesk 
+start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
+echo ------Anydesk Instalado------
+
 echo Instalando - Winrar 
 start winrar-x64-591.exe /S 
 echo ------Winrar Instalado------
 
-echo Instalando - Avira 
-start avira_setup.exe
-echo ------Avira Instalado------
 
 echo Instalando - 3DP_NET 
 start 3DP_Net_v1911.exe 
@@ -85,9 +86,9 @@ echo ------Adobe Instalado------
 
 pause 
 
-echo Instalando - Anydesk 
-start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
-echo ------Anydesk Instalado------
+echo Instalando - Avira 
+start avira_setup.exe
+echo ------Avira Instalado------
 
 echo "Todos os programs foram instalados!"
 pause
