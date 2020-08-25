@@ -8,18 +8,20 @@ color 1f
 echo.
 @echo====================Programs==============================
 echo.
+echo Windows 10 - Lowend
+echo Deseja iniciar a instalação?
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
-start vcredist_x86_2015.exe /Q
+start VC_redist.x86 _2015.exe /Q
 )
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x64.exe /Q
-start vcredist_x64_2015.exe /Q
+start VC_redist.x64 _2015.exe /Q
 )
 
 
