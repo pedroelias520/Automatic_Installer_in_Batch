@@ -10,9 +10,11 @@ echo =================Hello==================
 echo Hello welcome to TKE_Installer 
 echo Chossing your system operational 
 
+for /f "tokens=*" %%y in ('wmic cpu get numberoflogicalprocessors /value ^| find "="') do set logical_numbers=%%y
+set /A logical_cores_num = %logical_numbers:~18,21%
+
 for /f "tokens=*" %%i in ('wmic cpu get numberofcores /value ^| find "="') do set cores_number=%%i
-set /A core_num = %cores_number:~14,15%
-set /A limit_cores = 4
+set /A core_num = %cores_number:~14,15%	+ logical_cores_num
 
 for /f "tokens=*" %%f in ('wmic cpu get CurrentClockSpeed /value ^| find "="') do set cores=%%f 
 set /A core_speed =  %cores:~18,21%
