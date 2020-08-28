@@ -25,11 +25,11 @@ pause
 @echo off
 setlocal
 for /f "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
-if "%version%" == "10.0" (if %core_speed% GTR 2000 (if core_num GTR limit_cores (start cmd /k call Win10-HIGHEND.bat) else (start cmd /k call Win10-LOWEND.bat)) else (start cmd /k call Win10-LOWEND.bat))
-if "%version%" == "6.3"  (if %core_speed% GTR 2000 (if core_num GTR limit_cores (start cmd /k call Win8-HIGHEND.bat) else (start cmd /k call Win8-LOWEND.bat)) else (start cmd /k call Win8-LOWEND.bat))
-if "%version%" == "6.2"  (if %core_speed% GTR 2000 (if core_num GTR limit_cores (start cmd /k call Win8-HIGHEND.bat) else (start cmd /k call Win8-LOWEND.bat)) else (start cmd /k call Win8-LOWEND.bat))
-if "%version%" == "6.1"  (if %core_speed% GTR 2000 (if core_num GTR limit_cores (start cmd /k call Win7-HIGHEND.bat) else (start cmd /k call Win7-LOWEND.bat)) else (start cmd /k call Win7-LOWEND.bat))
-if "%version%" == "6.0"  (if %core_speed% GTR 2000 (if core_num GTR limit_cores (start cmd /k call Win7-HIGHEND.bat) else (start cmd /k call Win7-LOWEND.bat)) else (start cmd /k call Win7-LOWEND.bat))
+if "%version%" == "10.0" (if %core_speed% GTR 2000 (if core_num GTR 6 (start cmd /k call Win10-HIGHEND.bat) else (start cmd /k call Win10-LOWEND.bat)) else (start cmd /k call Win10-LOWEND.bat))
+if "%version%" == "6.3"  (if %core_speed% GTR 2000 (if core_num GTR 6 (start cmd /k call Win8-HIGHEND.bat) else (start cmd /k call Win8-LOWEND.bat)) else (start cmd /k call Win8-LOWEND.bat))
+if "%version%" == "6.2"  (if %core_speed% GTR 2000 (if core_num GTR 6 (start cmd /k call Win8-HIGHEND.bat) else (start cmd /k call Win8-LOWEND.bat)) else (start cmd /k call Win8-LOWEND.bat))
+if "%version%" == "6.1"  (if %core_speed% GTR 2000 (if core_num GTR 6 (start cmd /k call Win7-HIGHEND.bat) else (start cmd /k call Win7-LOWEND.bat)) else (start cmd /k call Win7-LOWEND.bat))
+if "%version%" == "6.0"  (if %core_speed% GTR 2000 (if core_num GTR 6 (start cmd /k call Win7-HIGHEND.bat) else (start cmd /k call Win7-LOWEND.bat)) else (start cmd /k call Win7-LOWEND.bat))
 rem etc etc
 endlocal
 
