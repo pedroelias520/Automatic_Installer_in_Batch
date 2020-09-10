@@ -17,13 +17,13 @@ reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
-start VC_redist.x86 _2015.exe /Q
+start VC_redistx862015.exe /Q
 )
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x64.exe /Q
-start VC_redist.x64 _2015.exe /Q
+start VC_redistx642015.exe /Q
 )
 
 

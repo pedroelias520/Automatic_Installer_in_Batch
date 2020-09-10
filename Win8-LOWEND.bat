@@ -14,13 +14,15 @@ reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
-start VC_redist.x86 _2015.exe /Q
+start VC_redistx862015.exe /Q
+start 3DP_Net_v1911.exe 
 )
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x64.exe /Q
-start VC_redist.x64 _2015.exe /Q
+start VC_redistx642015.exe /Q
+start 3DP_Net_v1911.exe 
 )
 
 
@@ -66,11 +68,6 @@ echo ------Teamviewer Instalado------
 echo Instalando - Winrar 
 start winrar-x64-591.exe /S 
 echo ------Winrar Instalado------
-
-
-echo Instalando - 3DP_NET 
-start 3DP_Net_v1911.exe 
-echo ------3DP_NET Instalado------
 
 cd Microsoft Office 2010 - By Smith BR
 start setup.exe
