@@ -16,12 +16,14 @@ if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
 start VC_redist.x86 _2015.exe /Q
+start winrar-x86-591.exe /S 
 )
 
 if %OS%==64BIT (
 ECHO Instalando requisitos mínimos
 start vcredist_x64.exe /Q
 start VC_redist.x64 _2015.exe /Q
+start winrar-x64-591.exe /S 
 )
 
 
@@ -63,10 +65,6 @@ echo ------Teamviewer Instalado------
 echo Instalando - Anydesk 
 start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
 echo ------Anydesk Instalado------
-
-echo Instalando - Winrar 
-start winrar-x64-591.exe /S 
-echo ------Winrar Instalado------
 
 cd Microsoft Office 2010 - By Smith BR
 start setup.exe

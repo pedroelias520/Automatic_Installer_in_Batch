@@ -16,6 +16,7 @@ ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
 start VC_redistx862015.exe /Q
 start 3DP_Net_v1911.exe 
+start winrar-x86-591.exe /S 
 )
 
 if %OS%==64BIT (
@@ -23,6 +24,7 @@ ECHO Instalando requisitos mínimos
 start vcredist_x64.exe /Q
 start VC_redistx642015.exe /Q
 start 3DP_Net_v1911.exe 
+start winrar-x64-591.exe /S 
 )
 
 
@@ -64,10 +66,6 @@ echo ------Anydesk Instalado------
 echo Instalando - Teamviewer 
 start /wait TeamViewer_Setup.exe /S /norestart
 echo ------Teamviewer Instalado------
-
-echo Instalando - Winrar 
-start winrar-x64-591.exe /S 
-echo ------Winrar Instalado------
 
 cd Microsoft Office 2010 - By Smith BR
 start setup.exe
