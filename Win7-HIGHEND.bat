@@ -12,10 +12,9 @@ echo Windows 7 - Highend
 
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
-for /f "tokens=*" %%y in ('cscript //nologo "%systemroot%\system32\slmgr.vbs" /dli ^| find "License Status:"') do set activation=%%y
-
-echo %activation% 
-pause
+for /f "tokens=3 delims=: " %%a in ('cscript //nologo "%systemroot%\system32\slmgr.vbs" /dli ^| find "License Status:"' ) do set "licenseStatus=%%a"
+echo %licenseStatus%
+if /i "%licenseStatus%"=="Licenciado" (echo Your Windows is activated) else (echo Your Windows is not activated)
 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
