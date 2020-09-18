@@ -14,7 +14,7 @@ reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" 
 
 for /f "tokens=3 delims=: " %%a in ('cscript //nologo "%systemroot%\system32\slmgr.vbs" /dli ^| find "License Status:"' ) do set licenseStatus=%%a
 set win = %licenseStatus:~0,10%
-if /i %win%=="Licensed" ( echo Your Windows is activated ) else ( echo Your Windows isn't activated )
+if "%win%" == "Licensed" ( ECHO %win% ) else ( ECHO %win% )
 
 if %OS%==32BIT (
 ECHO Instalando requisitos mínimos
