@@ -57,10 +57,6 @@ echo Instalando - K-lite
 start k-lite-codec-pack-mega-15-6-0.exe /verysilent
 echo ------K-lite Initiated------
 
-echo Instalando - Nero 8 
-start Nero-8.3.6.0_ptb_trial.exe
-start Serial.txt
-echo ------Nero 8 Initiated------
 
 echo Instalando - Anydesk 
 start AnyDesk.exe --silent --create-shortcuts --create-desktop-icon
@@ -74,8 +70,14 @@ cd Microsoft Office 2010 - By Smith BR
 start setup.exe
 echo ------Microsoft Office 2010 Initiated------
 
+
 cd ..
 pause
+
+echo Instalando - Nero 8 
+start Nero-8.3.6.0_ptb_trial.exe
+start Serial.txt
+echo ------Nero 8 Initiated------
 
 echo Instalando - Adobe 
 start readerdc_br_gi_cra_install.exe /msi EULA_ACCEPT=YES /qn 

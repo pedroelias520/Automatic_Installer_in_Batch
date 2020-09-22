@@ -16,7 +16,8 @@ ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
 start VC_redistx862015.exe /Q
 start 3DP_Net_v1911.exe 
-start winrar-x86-591.exe /S 
+start winrar-x86-591.exe /S
+start jre-8u261-windows-x86.exe /s  
 )
 
 if %OS%==64BIT (
@@ -24,7 +25,8 @@ ECHO Instalando requisitos mínimos
 start VC_redistx642015.exe /Q
 start vcredist_x64_2015.exe /Q
 start 3DP_Net_v1911.exe 
-start winrar-x64-591.exe /S 
+start winrar-x64-591.exe /S
+start jre-8u261-windows-x64.exe /s  
 )
 
 
@@ -46,18 +48,9 @@ echo Instalando - Firefox Navigator
 start Firefox_Installer.exe
 echo ------Firefox Instalado------
 
-echo Instalando - Java 
-start jre-8u261-windows-x64.exe /s 
-echo ------Java Instalado------
-
 echo Instalando - K-lite
 start k-lite-codec-pack-mega-15-6-0.exe /verysilent
 echo ------K-lite Instalado------
-
-echo Instalando - Nero 8 
-start Nero-8.3.6.0_ptb_trial.exe
-start Serial.txt
-echo ------Nero 8 Instalado------
 
 
 echo Instalando - Teamviewer 
@@ -73,6 +66,12 @@ start setup.exe
 echo ------Microsoft Office 2010 Instalado------
 
 cd ..
+
+echo Instalando - Nero 8 
+start Nero-8.3.6.0_ptb_trial.exe
+start Serial.txt
+echo ------Nero 8 Instalado------
+
 pause
 
 echo Instalando - Adobe 
