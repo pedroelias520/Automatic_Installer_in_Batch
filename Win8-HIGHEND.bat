@@ -17,7 +17,8 @@ start vcredist_x86.exe /Q
 start VC_redistx862015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x86-591.exe /S
-start jre-8u261-windows-x86.exe /s  
+start jre-8u261-windows-x86.exe /s 
+start dotNetFx35setup.exe /q 
 )
 
 if %OS%==64BIT (
@@ -27,6 +28,7 @@ start vcredist_x64_2015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x64-591.exe /S
 start jre-8u261-windows-x64.exe /s  
+start dotNetFx35setup.exe /q
 )
 
 

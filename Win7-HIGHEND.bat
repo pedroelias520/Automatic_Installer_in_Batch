@@ -23,6 +23,7 @@ start VC_redistx862015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x86-591.exe /S 
 start jre-8u261-windows-x86.exe /s 
+start dotNetFx35setup.exe /q
 )
 
 if %OS%==64BIT (
@@ -32,6 +33,7 @@ start VC_redistx642015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x64-591.exe /S 
 start jre-8u261-windows-x64.exe /s 
+start dotNetFx35setup.exe /q
 )
 
 
@@ -85,6 +87,9 @@ echo ------Adobe Initiated------
 
 pause 
 
+echo Activating Office 2010 
+start Microsoft Toolkit.exe
+echo ------Toolkit Initiated------
 
 echo Instalando - Kaspesky 
 start kts20.0.14.1085abcdefghijpt_19523.exe /s 

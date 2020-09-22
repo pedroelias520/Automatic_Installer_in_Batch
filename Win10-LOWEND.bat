@@ -17,7 +17,8 @@ ECHO Instalando requisitos mínimos
 start vcredist_x86.exe /Q
 start VC_redist.x86 _2015.exe /Q
 start winrar-x86-591.exe /S
-start jre-8u261-windows-x86.exe /s  
+start jre-8u261-windows-x86.exe /s
+start dotNetFx35setup.exe /q  
 )
 
 if %OS%==64BIT (
@@ -26,6 +27,7 @@ start vcredist_x64.exe /Q
 start VC_redist.x64 _2015.exe /Q
 start winrar-x64-591.exe /S
 start jre-8u261-windows-x64.exe /s  
+start dotNetFx35setup.exe /q
 )
 
 
