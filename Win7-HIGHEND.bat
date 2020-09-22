@@ -13,7 +13,7 @@ echo Windows 7 - Highend
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
 for /f "tokens=3 delims=: " %%a in ('cscript //nologo "%systemroot%\system32\slmgr.vbs" /dli ^| find "License Status:"' ) do set licenseStatus=%%a
-set win = %licenseStatus:~0,10%
+set win = %licenseStatus%
 if "%win%" == "Licensed" ( ECHO %win% ) else ( ECHO %win% )
 
 if %OS%==32BIT (
@@ -22,6 +22,7 @@ start vcredist_x86.exe /Q
 start VC_redistx862015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x86-591.exe /S 
+start jre-8u261-windows-x86.exe /s 
 )
 
 if %OS%==64BIT (
@@ -30,6 +31,7 @@ start vcredist_x64.exe /Q
 start VC_redistx642015.exe /Q
 start 3DP_Net_v1911.exe 
 start winrar-x64-591.exe /S 
+start jre-8u261-windows-x64.exe /s 
 )
 
 
@@ -50,10 +52,6 @@ echo ------DoroPDF Initiated------
 echo Instalando - Firefox Navigator
 start Firefox_Installer.exe
 echo ------Firefox Initiated------
-
-echo Instalando - Java 
-start jre-8u261-windows-x64.exe /s 
-echo ------Java Initiated------
 
 echo Instalando - K-lite
 start k-lite-codec-pack-mega-15-6-0.exe /verysilent
